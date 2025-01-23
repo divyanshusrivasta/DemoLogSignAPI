@@ -18,7 +18,7 @@ public class AccountController(IAccountService accountService) : ControllerBase
 			var userDetail = await _accountService.GetUserDetailByEmailAsync(registerVM.Email!);
 			if (userDetail != null)
 			{
-				return Ok($"User with email {registerVM.Email} already exists");
+				return Ok($"User with email {registerVM.Email} already there.");
 			}
 
 			await _accountService.RegisterAsync(registerVM);
